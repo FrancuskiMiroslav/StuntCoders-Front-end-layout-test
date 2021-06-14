@@ -1,1 +1,137 @@
+.quote {
+	padding: 52px 70px;
+	text-align: center;
+	@include fluid-typo(375px, 1400px, 22px, 24px);
+	letter-spacing: 1.2px;
+	max-width: 1320px;
+	margin: 0 auto;
+	margin-bottom: 20px;
 
+	@include breakpoint-max(900) {
+		padding: 44px 60px;
+	}
+}
+
+.grid-container {
+	margin: 0 auto;
+	display: grid;
+	max-width: 1300px;
+	padding: 0 30px;
+	grid-template-columns: 25.8% 30.2% 38.7%;
+	grid-template-rows: 490px 600px 600px 380px;
+	justify-items: center;
+	justify-content: center;
+	align-items: center;
+	gap: 34px;
+
+	@include breakpoint-max(900) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.number {
+		background-color: $primaryClr;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-family: $font-PT-serif;
+		@include fluid-typo(375px, 1400px, 120px, 240px);
+	}
+}
+
+.grid-item {
+	height: 100%;
+	text-align: center;
+
+	&__content {
+		padding: 20px 8px;
+	}
+
+	&__image {
+		width: 100%;
+		object-fit: cover;
+		height: fit-content;
+		object-position: 78% 50%;
+
+		@include breakpoint-max(900) {
+			height: auto;
+		}
+	}
+
+	&.double-row {
+		grid-row: 3 / 5;
+		grid-column: 3 / 4;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		@include fluid-typo(375px, 1400px, 24px, 36px);
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		@include fluid-typo(375px, 1400px, 18px, 30px);
+	}
+
+	&.two {
+		@include breakpoint-max(900) {
+			grid-row: 2 / 4;
+			grid-column: 2 / 3;
+		}
+	}
+
+	&.three {
+		@include breakpoint-max(900) {
+			grid-row: 5 / 7;
+			grid-column: 1 / 2;
+		}
+	}
+
+	&.four {
+		@include breakpoint-max(900) {
+			grid-row: 8 / 10;
+			grid-column: 2 / 3;
+		}
+	}
+
+	&.step-one {
+		@include breakpoint-max(900) {
+			grid-row: 2 / 3;
+			grid-column: 1 / 2;
+		}
+	}
+
+	&.step-two {
+		@include breakpoint-max(900) {
+			grid-row: 4 / 6;
+			grid-column: 2 / 3;
+
+			& .grid-item__image {
+				height: fit-content;
+			}
+		}
+	}
+
+	&.step-three {
+		@include breakpoint-max(900) {
+			grid-row: 7 / 9;
+			grid-column: 1 / 2;
+		}
+	}
+
+	&.second {
+		@include breakpoint-max(900) {
+			grid-row: 3 / 5;
+			grid-column: 1 / 2;
+		}
+	}
+
+	&.third {
+		@include breakpoint-max(900) {
+			grid-row: 6 / 8;
+			grid-column: 2 / 3;
+		}
+	}
+}
