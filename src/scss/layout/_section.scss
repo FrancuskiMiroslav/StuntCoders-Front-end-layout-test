@@ -23,9 +23,12 @@
 	justify-content: center;
 	align-items: center;
 	gap: 34px;
+	margin-bottom: 116px;
 
 	@include breakpoint-max(900) {
 		grid-template-columns: 1fr 1fr;
+		grid-template-rows: max-content;
+		margin-bottom: 30px;
 	}
 
 	.number {
