@@ -24,12 +24,12 @@ footer {
 	}
 
 	&__left {
-		padding-left: 76px;
-		padding-top: 45px;
+		padding-left: 6%;
+		padding-top: 4%;
 		display: flex;
 		flex-direction: column;
 
-		@include breakpoint-max(900) {
+		@include breakpoint-max(1000) {
 			padding-left: 20px;
 			padding-top: 20px;
 		}
@@ -37,9 +37,9 @@ footer {
 
 	&__left-title {
 		text-transform: uppercase;
-		max-width: 330px;
+		max-width: 360px;
 		line-height: 104px;
-		@include fluid-typo(375px, 1400px, 50px, 85px);
+		@include fluid-typo(375px, 1400px, 40px, 85px);
 		margin-bottom: 25px;
 
 		@include breakpoint-max(900) {
@@ -50,7 +50,7 @@ footer {
 	}
 
 	&__left-text {
-		@include fluid-typo(375px, 1400px, 30px, 30px);
+		@include fluid-typo(375px, 1400px, 28px, 30px);
 		padding-right: 20px;
 		@include breakpoint-max(900) {
 			margin-bottom: 15px;
